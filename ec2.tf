@@ -31,7 +31,7 @@ resource "aws_network_interface" "adastraec2-test" {
 resource "aws_security_group" "adastraec2-test" {
   name = "adastra-tf-ghactions-sg"
   vpc_id = aws_vpc.adastraec2-test.id
-  ingress = {
+  ingress {
     from_port= 8080
     to_port= 8080
     protocol= "tcp"
