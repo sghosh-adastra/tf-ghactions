@@ -35,12 +35,12 @@ resource "aws_security_group" "adastraec2-test" {
     from_port= 8080
     to_port= 8080
     protocol= "tcp"
-    cidr_block= ["0.0.0.0/0"]
+    cidr_blocks= ["0.0.0.0/0"]
   }
 }
 
 #AWS EC2
-resource "aws_ec2" "adastraec2-test" {
+resource "aws_instance" "adastraec2-test" {
   ami= "ami-00ad2436e75246bba"
   instance_type= "t2.micro"
 
