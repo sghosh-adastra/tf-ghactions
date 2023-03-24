@@ -3,7 +3,7 @@ resource "aws_vpc" "adastraec2-test" {
   cidr_block = "172.16.0.0/16"
 
   tags = {
-    Name = "vpc-adatratsg-ghations"
+    Name = "vpc-adatratsg-ghactions"
   }
 }
 
@@ -13,17 +13,16 @@ resource "aws_subnet" "adastraec2-test" {
   cidr_block = "172.16.0.0/24"
 
   tags = {
-    "Name" = "subnet-adatratsg-ghations"
+    "Name" = "subnet-adatratsg-ghactions"
   }
 }
 
 #VPC Network Interface
 resource "aws_network_interface" "adastraec2-test" {
   subnet_id = aws_subnet.adastraec2-test.id
-  private_ips = ["172.16.10.100"]
 
   tags = {
-    "Name" = "NI-adatratsg-ghations"
+    "Name" = "NI-adatratsg-ghactions"
   }
 }
 
